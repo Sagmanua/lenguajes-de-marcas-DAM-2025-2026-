@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    div {
+        border: 1px solid gray;
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2px;
+    }
+    body {
+        display: grid;
+        grid-template-columns: repeat(7, 40px);
+    }
+</style>
+</head>
+<body>
+<script>
+
+    const hoy = new Date();
+
+    const anio = hoy.getFullYear();
+    const mes = hoy.getMonth(); // 0 = Enero, 11 = Diciembre
+
+    // Último día del mes → día 0 del siguiente mes
+    const dias_en_mes = new Date(anio, mes + 1, 0).getDate();
+    console.log(dias_en_mes);
+
+    for (let dia = 1; dia <= dias_en_mes; dia++) {
+        document.write("<div>" + dia + "</div>");
+    }
+</script>
+</body>
+</html>
