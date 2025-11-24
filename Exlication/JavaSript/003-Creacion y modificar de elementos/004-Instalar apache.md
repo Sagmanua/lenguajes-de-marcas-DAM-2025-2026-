@@ -9,6 +9,7 @@ DE ahi en adelante ,todos los archivos que habias tendran que estan /var/www/htm
 Liberación de permisos:
 
 cd /var/www
+cd = change directory (win Linux macOS)
 sudo chmod 777 -R html
 
 sudo = El super usuario va a hacer algo

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+   <head>
+   </head>
+   <body>
+       <nav></nav>
+       <script>
+           // En primer lugar cargamos datos de un json
+           fetch("tabla.json")
+           .then(function(respuesta){
+               return respuesta.json(); // La resp viene en JSON
+           })
+           .then(function(datos){
+                let contededor = document.querySelector("body");
+                let tabla = document.createElement("table");
+                contededor.appendChild(tabla); // al cuerpo el añado la tabla 
+                //para cada una de las lines del json
+                datos.forEach(function(celda){
+                    // primero creo una filla - table row
+                    let fila = document.createElement("tr");
+                    linea.forEach(function(celda){
+                        let data = document.createElement("td");
+                        data.textContent = celda
+                        fila.appendChild(data);
+                    })
+               })
+                tabla.appendChild(fila)
+               });
+       </script>
+   </body>
+</html>

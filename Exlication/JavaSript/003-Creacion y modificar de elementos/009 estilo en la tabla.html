@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla con JSON</title>
+    <style>
+        table {
+            border: 3px solid blue;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid blue;
+            padding: 10px;
+        }
+        th {
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+fetch("tabla.json")
+.then(respuesta => respuesta.json())
+.then(datos => {
+    let tabla = document.createElement("table");
+    document.body.appendChild(tabla);
+
+    datos.forEach(linea => {
+        let fila = document.createElement("tr");
+        linea.forEach(celda => {
+            let td = document.createElement("td");
+            td.textContent = celda;
+            fila.appendChild(td);
+        });
+        tabla.appendChild(fila);
+    });
+});
+</script>
+
+</body>
+</html>

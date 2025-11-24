@@ -1,0 +1,62 @@
+jocarsa | visor de editor
+Vista:
+
+Fila
+Tema:
+
+Oscuro
+Fuente:
+
+Open Sans
+Actualizado: 9:48:15
+tabla.json
+[
+  ["id", "nombre", "email", "telefono", "direccion", "fecha_alta"],
+  [1, "María López García", "maria.lopez@example.com", "+34 612 345 678", "Calle Mayor 12, 46001 Valencia", "2024-01-15"],
+  [2, "Javier Martínez Ruiz", "javier.martinez@example.com", "+34 699 123 456", "Avenida del Puerto 88, 46022 Valencia", "2024-02-03"],
+  [3, "Lucía Fernández Torres", "lucia.fernandez@example.com", "+34 644 987 321", "Calle Colón 5, 46004 Valencia", "2024-03-21"],
+  [4, "Carlos Navarro Giménez", "carlos.navarro@example.com", "+34 622 111 222", "Plaza del Ayuntamiento 3, 46002 Valencia", "2024-04-10"],
+  [5, "Elena Serrano Vidal", "elena.serrano@example.com", "+34 633 555 999", "Calle San Vicente 45, 46007 Valencia", "2024-05-02"]
+]
+009-estilo en la tabla.html
+<!doctype html>
+<html>
+   <head>
+   </head>
+   <body>
+       <nav></nav>
+       <script>
+           // En primer lugar cargamos datos de un json
+           fetch("tabla.json")
+           .then(function(respuesta){
+               return respuesta.json(); // La resp viene en JSON
+           })
+           .then(function(datos){
+               // Selecciono el contenedor de la tabla
+               let contenedor = document.querySelector("body");
+               // Primero creo una tabla en memoria
+               let tabla = document.createElement("table");
+               // Al cuerpo le añado la tabla
+               contenedor.appendChild(tabla); 
+               // Para cada una de las lineas del json:
+               datos.forEach(function(linea){
+               		// Primero creo una fila - table row
+                   let fila = document.createElement("tr");
+                   // Ahora creo tantas celdas como sea necesario
+                   linea.forEach(function(celda){
+                       	// Creo una celda vacia HTML
+                   		let data = document.createElement("td");
+                       	// Le pongo el texto a la celda
+                       	data.textContent = celda
+                       	// A la fila, le añado la celda
+                       	fila.appendChild(data);
+                   })
+                   // A la tabla le añado esta fila
+                   tabla.appendChild(fila)
+               })
+           })
+       </script>
+   </body>
+</html>
+
+
