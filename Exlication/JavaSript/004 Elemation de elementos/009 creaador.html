@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+    <style>
+      .cuadrado{width:50px;height:50px;background:red;position:absolute;}
+   	</style>
+  </head>
+  <body>
+    <button id="pulsa_cuadrafo">Pulsa para crear un cuafrado</button>
+        <button id="pulsa_circlo">Pulsa para crear un cuafrado</button>
+<script>
+    let pulsa_cuadrafo = document.querySelector("#pulsa_cuadrafo")
+    let pulsa_circlo = document.querySelector("#pulsa_circlo")
+
+    pulsa_cuadrafo.onclick = function(){
+        let elementi = document.createElement("div")
+        elementi.classList.add("cuadrado");
+        elementi.style.left = Math.random()*500+"px";
+        elementi.style.top = Math.random()*500+"px";
+        document.querySelector("body").appendChild(elementi)
+        let = rojo = Math.round(Math.random()*255)
+        let = verde = Math.round(Math.random()*255)
+        let = azul = Math.round(Math.random()*255)
+        elementi.style.background = "rgb("+rojo+","+verde+","+azul+")"
+
+    }
+
+      
+    </script>
+  </body>
+</html>
