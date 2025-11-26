@@ -3,6 +3,8 @@
 	<head>
     <style>
       .cuadrado{width:50px;height:50px;background:red;position:absolute;}
+      .circulo{width:50px;height:50px;background:red;position:absolute;border-radius:50px;}
+
    	</style>
   </head>
   <body>
@@ -24,7 +26,17 @@
         elementi.style.background = "rgb("+rojo+","+verde+","+azul+")"
 
     }
-
+      pulsa_circlo.onclick = function(){
+      	let elemento = document.createElement("div")		// Creo un elemento nuevo
+        elemento.classList.add("circulo");							// Le pongo la clase cuadrado
+        elemento.style.left = Math.random()*500+"px";		// Posición aleatoria en X
+        elemento.style.top = Math.random()*500+"px";		// Posición aleatoria en Y
+        document.querySelector("body").appendChild(elemento)	// Añado el elemento al body
+        let rojo = Math.round(Math.random()*255);				// Creo un rojo aleatorio
+        let verde = Math.round(Math.random()*255);			// Creo un verde aleatorio
+        let azul = Math.round(Math.random()*255);				// Creo un azul aleatorio
+        elemento.style.background = "rgb("+rojo+","+verde+","+azul+")";	// Y pongo el color
+      }
       
     </script>
   </body>
