@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Editable personal CV in XML format.
+  Replace placeholder values with your own information.
+  Structure: <cv> contains sections: personal, summary, experience, education, skills, languages, certifications, projects, publications, references
+-->
+<cv id="cv-001">
+  <personal>
+    <name>
+      <given>Jane</given>
+      <family>Doe</family>
+    </name>
+    <title>Senior Software Engineer</title>
+    <contact>
+      <email>jane.doe@example.com</email>
+      <phone>+44-20-7123-4567</phone>
+      <website>https://janedoe.dev</website>
+      <linkedin>https://www.linkedin.com/in/janedoe</linkedin>
+      <location>
+        <city>London</city>
+        <country>United Kingdom</country>
+      </location>
+    </contact>
+  </personal>
+
+  <summary>
+    <paragraph>Experienced software engineer with 8+ years building scalable web applications, leading small teams, and shipping reliable APIs. Passionate about clean architecture, test-driven development, and mentoring junior engineers.</paragraph>
+  </summary>
+
+  <experience>
+    <job id="job-001">
+      <position>Lead Backend Engineer</position>
+      <company>FinTech Co.</company>
+      <location>London, UK</location>
+      <start>2022-06</start>
+      <end>Present</end>
+      <responsibilities>
+        <item>Architected and implemented microservice-based payment processing platform handling 10k TPS.</item>
+        <item>Led a team of 6 engineers, introduced CI/CD and observability practices.</item>
+        <item>Reduced average latency by 45% through profiling and targeted optimisations.</item>
+      </responsibilities>
+    </job>
+
+    <job id="job-002">
+      <position>Senior Software Engineer</position>
+      <company>WebApps Ltd.</company>
+      <location>Remote</location>
+      <start>2018-09</start>
+      <end>2022-05</end>
+      <responsibilities>
+        <item>Designed RESTful APIs and real-time features using WebSockets.</item>
+        <item>Mentored interns and ran engineering brown-bag sessions.</item>
+        <item>Introduced unit and integration test coverage, increasing reliability.</item>
+      </responsibilities>
+    </job>
+  </experience>
+
+  <education>
+    <degree id="edu-001">
+      <type>MSc</type>
+      <field>Computer Science</field>
+      <institution>University of Cambridge</institution>
+      <start>2016-09</start>
+      <end>2017-09</end>
+      <grade>Distinction</grade>
+    </degree>
+
+    <degree id="edu-002">
+      <type>BSc</type>
+      <field>Software Engineering</field>
+      <institution>University of Manchester</institution>
+      <start>2012-09</start>
+      <end>2016-06</end>
+      <grade>First Class</grade>
+    </degree>
+  </education>
+
+  <skills>
+    <skill name="Programming Languages" level="expert">Java, Python, TypeScript</skill>
+    <skill name="Frameworks" level="advanced">Spring Boot, Node.js, React</skill>
+    <skill name="Databases" level="advanced">PostgreSQL, Redis, MongoDB</skill>
+    <skill name="DevOps" level="intermediate">Docker, Kubernetes, GitHub Actions</skill>
+  </skills>
+
+  <languages>
+    <language name="English" level="native"/>
+    <language name="Spanish" level="intermediate"/>
+  </languages>
+
+  <certifications>
+    <certification>
+      <name>Certified Kubernetes Administrator (CKA)</name>
+      <issuer>Cloud Native Computing Foundation</issuer>
+      <year>2021</year>
+    </certification>
+  </certifications>
+
+  <projects>
+    <project id="proj-001">
+      <title>Realtime Collaboration Platform</title>
+      <description>Built a collaborative document editor with operational-transform algorithms and realtime syncing across clients.</description>
+      <tech>TypeScript, Node.js, Redis, WebSocket</tech>
+      <link>https://github.com/janedoe/collab</link>
+    </project>
+  </projects>
+
+  <publications>
+    <publication>
+      <title>Scaling Microservices for High Throughput</title>
+      <venue>ACME Engineering Blog</venue>
+      <year>2023</year>
+      <link>https://acme.example.com/scaling-microservices</link>
+    </publication>
+  </publications>
+
+  <references>
+    <reference>
+      <name>John Smith</name>
+      <relationship>Former Manager</relationship>
+      <contact>john.smith@fintechco.example</contact>
+    </reference>
+  </references>
+
+  <!-- metadata for machine processing -->
+  <metadata>
+    <generated>2025-12-03</generated>
+    <version>1.0</version>
+  </metadata>
+</cv>
