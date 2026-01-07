@@ -6,13 +6,13 @@
 </head>
 <body>
 
-<div></div>
+
 
 <script>
 const articulos = ["Primer artículo", "Segundo artículo", "Tercer artículo"];
 const contenedor = document.querySelector("main");
 for (let i = 0; i < articulos.length; i++) {
-  contenedor.innerHTML += "<h3>" + articulos[i] + "</h3>";
+  document.querySelector("div").innerHTML = "<p>Contenido nuevo</p>";
 }
 </script>
 

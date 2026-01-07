@@ -1,16 +1,56 @@
-<!doctype html>
-<html>
-   <head>
-       <style>
-           html,body{height:100%;padding:0px;margin:0px;display:flex;width:100%;}
-           nav{background:indigo;flex:1;color:white;padding:20px;}
-           main{flex:4;background:aliceblue;padding:20px;}
-       </style>
-   </head>
-   <body>
-       <nav>1</nav>
-       <main>2</main>
-   </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla Básica</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table id="tabla"></table>
+
+    <script>
+        fetch("tabla.json")
+            .then(response => response.json())
+            .then(datos => {
+                const tabla = document.getElementById("tabla");
+
+                if(datos.length > 0){
+                    const encabezado = document.createElement("tr");
+                    datos[0].forEach(celda => {
+                        const th = document.createElement("th");
+                        th.textContent = celda;
+                        encabezado.appendChild(th);
+                    });
+                    tabla.appendChild(encabezado);
+
+                    for(let i = 1; i < datos.length; i++){
+                        const fila = document.createElement("tr");
+                        datos[i].forEach(celda => {
+                            const td = document.createElement("td");
+                            td.textContent = celda;
+                            fila.appendChild(td);
+                        });
+                        tabla.appendChild(fila);
+                    }
+                }
+            })
+    </script>
+</body>
 </html>
-
-

@@ -5,20 +5,30 @@
     <title>Crear elemento</title>
 </head>
 <body>
+    <table border="1"> <!-- Agregamos la tabla -->
+        <thead>
+            <tr>
+                <th>Columna 1</th>
+                <th>Columna 2</th>
+                <th>Columna 3</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
     <script>
-        let tabla = document.querySelector("table")
-        for(let i = 0;i<20;i++){
-            let fila = document.createElement("tr")
-            fila.innerHTML = "<td>Prueba</td><td>Prueba</td><td>Prueba</td>"
-            tabla.appendChild(fila)
-            fila.onclick = function(){	// Cuando hago click en la fila
-                this.remove()							// La elimino
-            }
-            fila.addEventListener("click",function(){
-                this.remove()
-            })
+        let tabla = document.querySelector("tbody"); // Seleccionamos el tbody
+        for (let i = 0; i < 20; i++) {
+            let fila = document.createElement("tr");
+            fila.innerHTML = "<td>Prueba</td><td>Prueba</td><td>Prueba</td>";
+
+            // Una sola forma de manejar el click es suficiente
+            fila.addEventListener("click", function () {
+                this.remove();
+            });
+
+            tabla.appendChild(fila);
         }
     </script>
-
 </body>
-</html>
