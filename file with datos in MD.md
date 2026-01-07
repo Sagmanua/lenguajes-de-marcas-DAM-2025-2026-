@@ -4,6 +4,13 @@
 
 
 # Desarrollo técnico correcto y preciso
+##
+
+Project/
+├─ explicacion.md
+├─ 001-lectura.html
+├─ 003-escribir.html 
+└─ 004-microblog.html
 ## HTML
 ### Despues de crear una gile `index.html` voy a hacer una pagina
 ### Código básico para una estructura de do
@@ -40,6 +47,12 @@
     <footer>Pie de página</footer>
 </body>
 ```
+### Esribo `<script>` que es contiene el JavaSript codigo dentro de etiqutas 
+```
+let hoy = new Date();
+console.log(hoy);
+```
+## Explicar cada file por 1 
 
 # Codigo completa
 ```

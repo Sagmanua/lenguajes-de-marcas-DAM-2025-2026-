@@ -14,3 +14,5 @@
 #### `text-align` sirve para alinear el texto dentro de un elemento.
 #### `grid-template-columns` define cuántas columnas tendrá tu grid y qué ancho tendrá cada una.
 #### `font-family`sirve para elegir la fuente (tipo de letra) que se usará en un texto.
+#### `border-collapse` controla si los bordes de las celdas de una tabla se muestran separados o colapsados en un solo borde.
+#### `border` agrega un borde alrededor del elemento.
