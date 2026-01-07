@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar elemento</title>
+</head>
+<body>
+
+    <h2>Eliminar un elemento</h2>
+
+    <div id="contenedor">
+        <p id="elemento">Este elemento será eliminado</p>
+    </div>
+
+    <button id="eliminar">Eliminar elemento</button>
+
+    <script>
+        const boton = document.getElementById("eliminar");
+        const elemento = document.getElementById("elemento");
+
+        boton.addEventListener("click", () => {
+            elemento.remove();
+        });
+    </script>
+
+</body>
+</html>

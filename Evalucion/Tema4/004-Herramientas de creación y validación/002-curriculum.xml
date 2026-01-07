@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum xmlns="https://ejemplo.com/curriculum"
+            version="1.0">
+    <datosPersonales>
+        <nombre>Bohdan</nombre>
+        <apellidos>Sydorenko</apellidos>
+        <fechaNacimiento>19.19.2005</fechaNacimiento>
+        <nacionalidad>Ucrañano</nacionalidad>
+        <email>mose@gmail.com</email>
+        <telefono>123456789</telefono>
+        <webPersonal>https://bohdansydorenko.com</webPersonal>
+        <linkedin>https://www.linkedin.com/in/bohdan-sydorenko-6993b1397/</linkedin>
+        <direccion>
+            <calle>nose</calle>
+            <codigoPostal>46011</codigoPostal>
+            <ciudad>Valencia</ciudad>
+            <pais>España</pais>
+        </direccion>
+    </datosPersonales>
+
+    
+    <perfilProfesional>
+        Estudiante de Desarrollo de 
+        Aplicaciones Multiplataforma (DAM) con actitud proactiva y 
+        fuerte motivación por aprender. 
+        Apasionado por la tecnología y la programación, 
+        busco mi primera experiencia profesional en el sector 
+        tecnológico para aplicar y ampliar mis conocimientos en 
+        desarrollo de software. Destaco por mi capacidad de trabajo en 
+        equipo, resolución de problemas y aprendizaje continuo. 
+        Manejo tecnologías como Java, Python, SQL, HTML, CSS y 
+        herramientas como Git y Visual Studio Code.
+    </perfilProfesional>
+
+    <formacionAcademica>
+    <estudio>
+        <titulo>Desarrollo de Aplicaciones Multiplataforma (DAM)</titulo>
+        <centro>Universidad Borcelle</centro>
+        <localizacion>Valencia, España</localizacion>
+        <fechaInicio>2025</fechaInicio>
+        <fechaFin>Actualidad</fechaFin>
+    </estudio>
+    <estudio>
+        <titulo>Bachillerato</titulo>
+        <centro>Escuela Secundaria Borcelle de Matemáticas</centro>
+        <localizacion>Ucrania</localizacion>
+        <fechaInicio>2020</fechaInicio>
+        <fechaFin>2022</fechaFin>
+    </estudio>
+    </formacionAcademica>
+    <publicaciones>
+    <publicacion>
+        <tipo>Libro</tipo>
+        <titulo>Aprende programación con Python</titulo>
+        <editorial>Editorial Ejemplo</editorial>
+        <anio>2025</anio>
+        <descripcion>
+            Manual práctico de introducción a la programación con Python
+            orientado a estudiantes y profesionales que se inician en el
+            desarrollo de software.
+        </descripcion>
+    </publicacion>
+    <publicacion>
+        <tipo>Artículo</tipo>
+        <titulo>Introducción a Java y desarrollo multiplataforma</titulo>
+        <editorial>Blog Personal / Medium</editorial>
+        <anio>2024</anio>
+        <descripcion>
+            Artículo explicativo sobre conceptos básicos de Java y su aplicación
+            en proyectos multiplataforma, con ejemplos prácticos.
+        </descripcion>
+    </publicacion>
+</publicaciones>

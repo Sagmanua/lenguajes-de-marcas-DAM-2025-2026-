@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Escribir contenido dinámico</title>
+</head>
+<body>
+
+<div></div>
+
+<script>
+const articulos = ["Primer artículo", "Segundo artículo", "Tercer artículo"];
+const contenedor = document.querySelector("main");
+for (let i = 0; i < articulos.length; i++) {
+  contenedor.innerHTML += "<h3>" + articulos[i] + "</h3>";
+}
+</script>
+
+</body>
+</html>
