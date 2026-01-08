@@ -4,7 +4,6 @@
            xmlns="https://ejemplo.com/curriculum"
            elementFormDefault="qualified">
 
-    <!-- Root element -->
     <xs:element name="curriculum">
         <xs:complexType>
             <xs:sequence>

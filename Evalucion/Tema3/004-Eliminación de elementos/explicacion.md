@@ -56,56 +56,56 @@ console.log(hoy);
 ## Explicar cada file por 1 
 ### 001-Primero creo un elemento.html
 ```
-    <script>
-        const contenedor = document.getElementById("contenedor");
-         const nuevoElemento = document.createElement("p");
-        nuevoElemento.textContent = "Este elemento fue creado con JavaScript";
-        contenedor.appendChild(nuevoElemento);
-    </script>
+<script>
+    const contenedor = document.getElementById("contenedor");
+        const nuevoElemento = document.createElement("p");
+    nuevoElemento.textContent = "Este elemento fue creado con JavaScript";
+    contenedor.appendChild(nuevoElemento);
+</script>
 ```
 ### 002-eliminamos el elemento.html
 ```
-    <script>
-        const boton = document.getElementById("eliminar");
-        const elemento = document.getElementById("elemento");
+<script>
+    const boton = document.getElementById("eliminar");
+    const elemento = document.getElementById("elemento");
 
-        boton.addEventListener("click", () => {
-            elemento.remove();
-        });
-    </script>
+    boton.addEventListener("click", () => {
+        elemento.remove();
+    });
+</script>
 ```
 ### 007-minijuego.html
 ```
-    <script>
-        // Seleccionamos el <tbody>, no la tabla directamente
-        let tabla = document.querySelector("tbody");
+<script>
+    // Seleccionamos el <tbody>, no la tabla directamente
+    let tabla = document.querySelector("tbody");
 
-        for (let i = 0; i < 20; i++) {
-            let fila = document.createElement("tr");
-            fila.innerHTML = "<td>Prueba</td><td>Prueba</td><td>Prueba</td>";
-            
-            // Añadimos un evento para eliminar la fila al hacer click
-            fila.addEventListener("click", function() {
-                this.remove();
-            });
+    for (let i = 0; i < 20; i++) {
+        let fila = document.createElement("tr");
+        fila.innerHTML = "<td>Prueba</td><td>Prueba</td><td>Prueba</td>";
+        
+        // Añadimos un evento para eliminar la fila al hacer click
+        fila.addEventListener("click", function() {
+            this.remove();
+        });
 
-            tabla.appendChild(fila);
-        }
-    </script>
+        tabla.appendChild(fila);
+    }
+</script>
 ```
 ### 004-click para eliminar.html
 ```
-   	<script>
-      let temporizador = setTimeout("bucle()",1000);	
-      
-      function bucle(){
-      	document.querySelector("#jugador").style.left = Math.random()*500+"px"
-        document.querySelector("#jugador").style.top = Math.random()*500+"px"
-        clearTimeout(temporizador) // Elimino temporizador para no acumular
-        temporizador = setTimeout("bucle()",1000); // Llamo a bucle de nuevo
-      }
-      
-    </script>
+<script>
+    let temporizador = setTimeout("bucle()",1000);	
+    
+    function bucle(){
+    document.querySelector("#jugador").style.left = Math.random()*500+"px"
+    document.querySelector("#jugador").style.top = Math.random()*500+"px"
+    clearTimeout(temporizador) // Elimino temporizador para no acumular
+    temporizador = setTimeout("bucle()",1000); // Llamo a bucle de nuevo
+    }
+    
+</script>
 ```
 # Codigo completa
 ```
