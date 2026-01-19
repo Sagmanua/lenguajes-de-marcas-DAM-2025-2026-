@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dark Panel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP NAV -->
+<header class="topbar">
+  <div class="brand">🌙 Admin Dark Mode</div>
+  <div class="user">Hi, User ⌄</div>
+</header>
+
+<!-- MAIN -->
+<main class="container">
+
+<!-- METRICS -->
+<section class="metrics">
+  <div class="metric">
+    <div class="icon green">💰</div>
+    <div>
+      <span>Total Revenue</span>
+      <strong>$3249</strong>
+    </div>
+  </div>
+
+  <div class="metric">
+    <div class="icon pink">👥</div>
+    <div>
+      <span>Total Users</span>
+      <strong>249</strong>
+    </div>
+  </div>
+
+  <div class="metric">
+    <div class="icon yellow">🆕</div>
+    <div>
+      <span>New Users</span>
+      <strong>2</strong>
+    </div>
+  </div>
+
+  <div class="metric">
+    <div class="icon blue">🖥️</div>
+    <div>
+      <span>Server Uptime</span>
+      <strong>152 days</strong>
+    </div>
+  </div>
+
+  <div class="metric">
+    <div class="icon purple">📋</div>
+    <div>
+      <span>To Do List</span>
+      <strong>7 tasks</strong>
+    </div>
+  </div>
+
+  <div class="metric">
+    <div class="icon red">📥</div>
+    <div>
+      <span>Issues</span>
+      <strong>3</strong>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- CHARTS -->
+<section class="charts">
+  <div class="panel">
+    <h3>Bar / Line Graph</h3>
+    <canvas id="chart1"></canvas>
+  </div>
+
+  <div class="panel">
+    <h3>Line Graph</h3>
+    <canvas id="chart2"></canvas>
+  </div>
+
+  <div class="panel">
+    <h3>Likes</h3>
+    <canvas id="chart3"></canvas>
+  </div>
+
+  <div class="panel">
+    <h3>Issues</h3>
+    <canvas id="chart4"></canvas>
+  </div>
+</section>
+
+<!-- TABLE -->
+<section class="panel">
+  <h3>Table</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Side</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Obi Wan Kenobi</td>
+        <td>Light</td>
+        <td>Jedi</td>
+      </tr>
+      <tr>
+        <td>Greedo</td>
+        <td>South</td>
+        <td>Scumbag</td>
+      </tr>
+      <tr>
+        <td>Darth Vader</td>
+        <td>Dark</td>
+        <td>Sith</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<script src="charts.js"></script>
+</body>
+</html>

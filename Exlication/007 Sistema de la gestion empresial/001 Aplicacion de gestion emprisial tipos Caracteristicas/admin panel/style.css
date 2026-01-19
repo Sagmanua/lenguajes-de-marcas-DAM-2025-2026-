@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #121212;
+  color: #ddd;
+}
+
+/* Topbar */
+.topbar {
+  background: #1f1f1f;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user {
+  cursor: pointer;
+}
+
+/* Layout */
+.container {
+  padding: 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 30px 0;
+}
+
+/* Metrics */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.metric {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.metric span {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.metric strong {
+  font-size: 22px;
+  color: #fff;
+}
+
+/* Icons */
+.icon {
+  font-size: 26px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.green { background: #16a34a; }
+.pink { background: #db2777; }
+.yellow { background: #ca8a04; }
+.blue { background: #2563eb; }
+.purple { background: #7c3aed; }
+.red { background: #dc2626; }
+
+/* Panels */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.panel {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.panel h3 {
+  margin-top: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  color: #aaa;
+  text-align: left;
+}
