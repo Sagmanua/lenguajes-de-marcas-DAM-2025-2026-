@@ -12,7 +12,7 @@ if not SMTP_SERVER or not SMTP_USER or not SMTP_PASS:
 
 msg = EmailMessage()
 msg["From"] = SMTP_USER
-msg["To"] = "jocarsa2@gmail.com"
+msg["To"] = "bestplaydsagman@gmail.com"
 msg["Subject"] = "Esto es un ejercicio de clase"
 msg.set_content("Hola esto es una prueba desde Python.\n")
 
