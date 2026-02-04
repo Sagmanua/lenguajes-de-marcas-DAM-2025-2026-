@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+    <head>
+            <style>
+      canvas{border:1px solid grey;}
+    </style>
+
+    </head>
+    <body>
+        <canvas></canvas>
+        <script>
+
+      // Declaración de clases
+        class Jugador{
+            constructor(){
+                this.x = 100;
+                this.y = 100;
+            }
+        }
+        class Npc{
+            constructor(){
+                this.x = Math.random() * 512;
+                this.y = Math.random() * 512;
+            }
+            mueve(){
+        	this.x += (Math.random()-0.5)*2
+            this.y += (Math.random()-0.5)*2
+        }
+        }
+
+
+        
+
+        // Condiciones globales de inicio
+        var lienzo = document.querySelector("canvas")
+        var contexto = lienzo.getContext("2d")
+        lienzo.width = 512
+        lienzo.height = 512
+        
+        var jugador = new Jugador();
+        let temporzador;
+        var fps = 1000/30;
+
+        var spritepersonaje = new Image()
+        spritepersonaje.src = "sprite.png"
+
+
+        var spritenpc = new Image()
+        spritenpc.src = "spritenpc.png"
+
+        var npcs = []
+        var numeronpcs = 10
+        let spriteWidth = 50;  // for example
+        let spriteHeight = 50;
+
+
+         // Preparo los NPC
+        var npcs = []											// Creo una lista
+        var numeronpcs = 10								// Creo una serie de npc
+        for(let i = 0;i<numeronpcs;i++){	// Recorro un for
+            npcs.push(new Npc())						// Añado NPCs a la lista
+        }
+
+
+        inicio()
+        
+        // Función de inicio
+
+        function inicio(){
+            console.log("You sor el inicio")
+            temporizador = setTimeout("bucle()",fps)
+        }
+        
+        // Función de bucle
+        function bucle(){
+            contexto.clearRect(0,0,512,512)
+            contexto.beginPath()
+            contexto.drawImage(spritepersonaje, jugador.x, jugador.y, spriteWidth, spriteHeight);
+
+
+            npcs.forEach(function(npc){
+                npc.mueve()
+                contexto.drawImage(spritenpc, npc.x, npc.y, spriteWidth, spriteHeight)
+            })
+
+
+            contexto.fill()
+            clearTimeout(temporzador)
+            temporzador = setTimeout("bucle()",fps)
+        }
+        // Manejadores de eventos
+        document.onkeydown = function(e){
+            console.log(e)
+            if(e.key == "w"){
+                jugador.y -= 10
+
+            }else if(e.key == "s"){
+                jugador.y += 10
+
+            }else if(e.key == "a"){
+                jugador.x -= 10
+
+            }else if(e.key == "d"){
+                jugador.x += 10
+
+            }
+        }
+        
+        </script>
+    </body>
+</html>

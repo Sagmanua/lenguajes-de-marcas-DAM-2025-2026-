@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+    --neon-cyan: #00f3ff;
+    --neon-pink: #ff00ff;
+    --dark-bg: #020205; 
+}
+
+body, html {
+    margin: 0; 
+    padding: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--dark-bg);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#gameCanvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at center, #1b1b2f 0%, #05050a 100%);
+    background-image: 
+        linear-gradient(rgba(0, 243, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.1) 1px, transparent 1px);
+    background-size: 80px 80px;
+    animation: grid-scroll 8s linear infinite;
+}
+
+/* UI Elements */
+#gui {
+    position: absolute; 
+    inset: 0;
+    padding: 30px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none; 
+    z-index: 20;
+}
+
+.header-left { display: flex; gap: 20px; }
+
+.stat-card {
+    background: rgba(0, 243, 255, 0.05);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-left: 4px solid var(--neon-cyan);
+    padding: 10px 20px;
+    backdrop-filter: blur(5px);
+}
+
+.label { display: block; font-size: 10px; color: var(--neon-cyan); letter-spacing: 2px; }
+.value { display: block; font-size: 30px; color: #fff; text-shadow: 0 0 10px var(--neon-cyan); }
+
+.xp-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#xp-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--neon-pink);
+    box-shadow: 0 0 15px var(--neon-pink);
+    transition: width 0.3s ease;
+}
+
+/* Upgrade Menu */
+#upgrade-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.upgrade-title {
+    color: var(--neon-cyan);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 20px var(--neon-cyan);
+}
+
+.upgrade-options { display: flex; gap: 30px; }
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--neon-pink);
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    pointer-events: all;
+    color: white;
+}
+
+.skill-card:hover {
+    background: var(--neon-pink);
+    box-shadow: 0 0 30px var(--neon-pink);
+    transform: translateY(-10px);
+}
+
+.vignette { position: fixed; inset: 0; background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.8) 90%); pointer-events: none; z-index: 10; }
+.scanlines { position: fixed; inset: 0; background: linear-gradient(to bottom, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%); background-size: 100% 4px; pointer-events: none; z-index: 11; }
+
+@keyframes grid-scroll { from { background-position: 0 0; } to { background-position: 0 80px; } }
